@@ -86,8 +86,9 @@ public interface CollectionManager<T> {
     /**
      * convert collection to json
      * @param json
+     * @return true if success, false if not
      */
-    public void deserializeCollection(String json);
+    public boolean deserializeCollection(String json);
 
     /**
      * parse collection from json

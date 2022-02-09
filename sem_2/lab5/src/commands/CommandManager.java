@@ -126,8 +126,8 @@ public class CommandManager implements Commandable{
             if (!(arg == null ||arg.equals(""))) fileManager.setPath(arg);
             String data = fileManager.read();
             if(data.equals("")) throw new CommandException("cannot load, data not found");
-            collectionManager.deserializeCollection(data);
-            print("collection successfully loaded");
+            boolean success = collectionManager.deserializeCollection(data);
+            if(success) print("collection successfully loaded");
         });
     }
 

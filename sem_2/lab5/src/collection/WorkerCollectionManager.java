@@ -8,9 +8,11 @@ import java.time.LocalDate;
 import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.Set;
 
 import data.Worker;
 import json.*;
@@ -28,11 +30,13 @@ import com.google.gson.reflect.TypeToken;
 public class WorkerCollectionManager implements CollectionManager<Worker>{
     private Vector<Worker> collection;
     private java.time.LocalDateTime initDate;
+    private HashSet<Integer> uniqueIds;
     /**
      * Constructor, set start values
      */
     public WorkerCollectionManager()
     {
+        uniqueIds = new HashSet<>();
         collection = new Vector<>();
         initDate = java.time.LocalDateTime.now();
     }
@@ -41,7 +45,12 @@ public class WorkerCollectionManager implements CollectionManager<Worker>{
         if (collection.isEmpty())
             return 1;
         else {
-            return collection.lastElement().getId() + 1;
+            Integer id = collection.lastElement().getId() + 1;
+            if(uniqueIds.contains(id)){
+                while (uniqueIds.contains(id)) id+=1;
+            }
+            uniqueIds.add(id);
+            return id;
         }
     }
 
@@ -102,6 +111,7 @@ public class WorkerCollectionManager implements CollectionManager<Worker>{
         for (Worker worker : collection){
             if (worker.getId() == id){
                 collection.remove(worker);
+                uniqueIds.remove(id);
                 print("element #"+Integer.toString(id)+" successfully deleted");
                 return;
             }
@@ -135,11 +145,13 @@ public class WorkerCollectionManager implements CollectionManager<Worker>{
    
     public void clear(){
         collection.clear();
+        uniqueIds.clear();
     }
 
     public void removeFirst(){
         int id = collection.get(0).getId();
         collection.remove(0);
+        uniqueIds.remove(id);
         print("element #"+Integer.toString(id)+" successfully deleted");
 
     }
@@ -222,7 +234,8 @@ public class WorkerCollectionManager implements CollectionManager<Worker>{
         }
     }
 
-    public void deserializeCollection(String json){
+    public boolean deserializeCollection(String json){
+        boolean success = true;
         try {
             if (json == null || json.equals("")){
                 collection =  new Vector<Worker>();
@@ -231,13 +244,15 @@ public class WorkerCollectionManager implements CollectionManager<Worker>{
                 Gson gson = new GsonBuilder()
                 .registerTypeAdapter(LocalDate.class, new LocalDateDeserializer())
                 .registerTypeAdapter(Date.class, new DateDeserializer())
-                .registerTypeAdapter(collectionType, new CollectionDeserializer())
+                .registerTypeAdapter(collectionType, new CollectionDeserializer(uniqueIds))
                 .create();
                 collection = gson.fromJson(json.trim(), collectionType);
             }
         } catch (JsonParseException e){
+            success = false;
             printErr("wrong json data");
-        }
+        } 
+        return success;
         
     }
 
