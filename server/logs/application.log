@@ -1,0 +1,192 @@
+[17:39:33.742 ERROR] cannot find file
+[17:39:33.753 TRACE] starting server
+[17:47:01.400 ERROR] cannot find file
+[17:47:01.404 TRACE] starting server
+[17:47:10.890 ERROR] wrong command
+[17:47:10.890 ERROR] wrong command
+[17:47:10.890 ERROR] wrong command
+[17:47:20.952 ERROR] wrong command
+[17:47:20.952 ERROR] wrong command
+[17:52:19.882 ERROR] cannot find file
+[17:52:19.887 TRACE] starting server
+[17:52:25.363 ERROR] wrong command
+[17:52:29.386 ERROR] wrong command
+[17:52:29.387 ERROR] wrong command
+[17:52:31.399 ERROR] wrong command
+[17:52:33.409 ERROR] wrong command
+[18:02:22.118 ERROR] cannot find file
+[18:02:22.123 TRACE] starting server
+[18:02:27.506 ERROR] wrong command
+[18:02:29.519 ERROR] wrong command
+[18:03:52.728 ERROR] cannot find file
+[18:03:52.731 TRACE] starting server
+[18:05:26.475 ERROR] cannot find file
+[18:05:26.477 TRACE] starting server
+[18:05:43.467 ERROR] cannot find file
+[18:05:43.470 TRACE] starting server
+[18:12:09.510 ERROR] cannot find file
+[18:12:09.515 TRACE] starting server
+[18:13:15.411 ERROR] cannot find file
+[18:13:15.415 TRACE] starting server
+[18:13:38.294 ERROR] cannot find file
+[18:13:38.299 TRACE] starting server
+[18:14:53.921 FATAL] end of input
+[18:17:27.106 ERROR] cannot find file
+[18:17:27.110 TRACE] starting server
+[18:20:47.624 ERROR] cannot find file
+[18:20:47.628 TRACE] starting server
+[18:22:16.177 ERROR] cannot find file
+[18:22:16.182 TRACE] starting server
+[18:23:02.763 ERROR] cannot find file
+[18:23:02.767 TRACE] starting server
+[18:23:14.368 ERROR] cannot find file
+[18:23:14.371 TRACE] starting server
+[18:23:25.082 ERROR] cannot find file
+[18:23:25.086 TRACE] starting server
+[19:00:09.330 ERROR] cannot find file
+[19:00:09.345 TRACE] starting server
+[19:02:10.494 ERROR] cannot find file
+[19:02:10.498 TRACE] starting server
+[19:02:18.939 ERROR] collection is empty
+[19:02:18.939 INFO ] Vector of Worker, size: 0, initialization date: 2022-03-12T19:02:10.080
+[19:02:18.991 INFO ] Added element: {
+  "id" : 1,
+  "name" : "ABOBUS",
+  "coordinates" : {"x" : 1.0, "y" : 2},
+  "creationDate" : "2022-03-12",
+  "salary" : 1000,
+  "endDate" : "2022-02-04",
+  "status" : "REGULAR",
+  "organization" : {"fullName" : "YYY", "type" : "PUBLIC"}
+}
+[19:02:18.993 INFO ] Added element: {
+  "id" : 2,
+  "name" : "ABOBA",
+  "coordinates" : {"x" : 3.0, "y" : 5},
+  "creationDate" : "2022-03-12",
+  "salary" : 2000,
+  "endDate" : "2022-02-04",
+  "position" : "MANAGER",
+  "status" : "REGULAR",
+  "organization" : {"fullName" : "ZZZ", "type" : "PUBLIC"}
+}
+[19:02:18.994 INFO ] Added element: {
+  "id" : 3,
+  "name" : "AMOGUS",
+  "coordinates" : {"x" : 4.0, "y" : 5},
+  "creationDate" : "2022-03-12",
+  "salary" : 2000,
+  "position" : "MANAGER",
+  "status" : "REGULAR",
+  "organization" : {"fullName" : "ZZZ", "type" : "PUBLIC"}
+}
+[19:02:18.995 INFO ] Added element: {
+  "id" : 4,
+  "name" : "AMOGA",
+  "coordinates" : {"x" : 3.0, "y" : 6},
+  "creationDate" : "2022-03-12",
+  "salary" : 3000,
+  "endDate" : "2001-01-01",
+  "position" : "MANAGER",
+  "status" : "REGULAR",
+  "organization" : {"fullName" : "ZZZ", "type" : "PUBLIC"}
+}
+[19:02:19.031 INFO ] [
+  {
+    "id": 1,
+    "name": "ABOBUS",
+    "coordinates": {
+      "x": 1.0,
+      "y": 2
+    },
+    "creationDate": "2022-03-12",
+    "salary": 1000,
+    "endDate": "2022-02-04",
+    "status": "REGULAR",
+    "organization": {
+      "fullName": "YYY",
+      "type": "PUBLIC"
+    }
+  },
+  {
+    "id": 2,
+    "name": "ABOBA",
+    "coordinates": {
+      "x": 3.0,
+      "y": 5
+    },
+    "creationDate": "2022-03-12",
+    "salary": 2000,
+    "endDate": "2022-02-04",
+    "position": "MANAGER",
+    "status": "REGULAR",
+    "organization": {
+      "fullName": "ZZZ",
+      "type": "PUBLIC"
+    }
+  },
+  {
+    "id": 4,
+    "name": "AMOGA",
+    "coordinates": {
+      "x": 3.0,
+      "y": 6
+    },
+    "creationDate": "2022-03-12",
+    "salary": 3000,
+    "endDate": "2001-01-01",
+    "position": "MANAGER",
+    "status": "REGULAR",
+    "organization": {
+      "fullName": "ZZZ",
+      "type": "PUBLIC"
+    }
+  },
+  {
+    "id": 3,
+    "name": "AMOGUS",
+    "coordinates": {
+      "x": 4.0,
+      "y": 5
+    },
+    "creationDate": "2022-03-12",
+    "salary": 2000,
+    "position": "MANAGER",
+    "status": "REGULAR",
+    "organization": {
+      "fullName": "ZZZ",
+      "type": "PUBLIC"
+    }
+  }
+]
+[19:02:19.044 INFO ] 2022-02-04 : 2
+2001-01-01 : 1
+
+[19:02:19.053 INFO ] {
+  "id" : 1,
+  "name" : "ABOBUS",
+  "coordinates" : {"x" : 1.0, "y" : 2},
+  "creationDate" : "2022-03-12",
+  "salary" : 1000,
+  "endDate" : "2022-02-04",
+  "status" : "REGULAR",
+  "organization" : {"fullName" : "YYY", "type" : "PUBLIC"}
+}
+{
+  "id" : 2,
+  "name" : "ABOBA",
+  "coordinates" : {"x" : 3.0, "y" : 5},
+  "creationDate" : "2022-03-12",
+  "salary" : 2000,
+  "endDate" : "2022-02-04",
+  "position" : "MANAGER",
+  "status" : "REGULAR",
+  "organization" : {"fullName" : "ZZZ", "type" : "PUBLIC"}
+}
+
+[19:02:19.055 INFO ] 1000
+2000
+3000
+
+[19:02:19.058 ERROR] cannot add
+[19:02:19.058 INFO ] script successfully executed
